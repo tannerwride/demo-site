@@ -8,7 +8,9 @@ jobs:
     steps: 
       - hugo/hugo-build
       - persist_to_workspace:
-          root: public
+          root: project
+          paths: 
+            - public
   print-generated:
     docker:
       - image: cimg/base:stable
