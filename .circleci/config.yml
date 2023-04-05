@@ -8,8 +8,8 @@ jobs:
       - image: cimg/base:stable
     steps:
       - attach_workspace:
-          at: src
-      - run: ls src
+          at: .
+      - run: ls 
        
 
 workflows: 
@@ -17,7 +17,6 @@ workflows:
     jobs:
       - hugo/build:
           html-proofer: false
-          source: src/
       - print-generated:
           requires: 
             - hugo/build
