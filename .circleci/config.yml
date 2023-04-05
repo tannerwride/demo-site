@@ -21,6 +21,7 @@ jobs:
 workflows: 
   main: 
     jobs:
-      
-      - print-generated
-          requires: hugo/build
+      - build
+      - print-generated:
+          requires: 
+            - build
