@@ -20,4 +20,4 @@ workflows:
           source: src/
       - print-generated:
           requires: 
-            - build
+            - hugo/build
