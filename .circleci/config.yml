@@ -15,7 +15,9 @@ jobs:
           command: |
             git config credential.helper 'cache --timeout=120'
             git config user.email $GITHUB_EMAIL
-            git checkout web-deploy
+            git checkout -b web-deploy
+            git add .
+            git commit -m "Page release"
        
 
 workflows: 
