@@ -8,7 +8,8 @@ jobs:
     environment: 
       AWS_REGION: us-east-2
     steps:
-      - checkout
+      - attach_workspace:
+          at: . 
       - aws-cli/setup:
           role-arn: "arn:aws:iam::957873794635:role/oidc_s3"
           aws-region: AWS_REGION
