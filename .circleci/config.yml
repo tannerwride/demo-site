@@ -12,6 +12,9 @@ jobs:
       - aws-cli/setup:
           role-arn: "arn:aws:iam::957873794635:role/oidc_s3"
           aws-region: AWS_REGION
+      - run: 
+          name: Remove old site
+          command: aws s3 rm s3://circlecidemo.com
 workflows: 
   main: 
     jobs:
