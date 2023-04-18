@@ -16,6 +16,6 @@ workflows:
     jobs:
       - hugo/build:
           html-proofer: false
-      - print-generated:
+      - install-aws-cli:
           requires: 
             - hugo/build
