@@ -5,11 +5,13 @@ orbs:
 jobs: 
   install-aws-cli:
     executor: aws-cli/default
+    environment: 
+      AWS_REGION: us-east-2
     steps:
       - checkout
       - aws-cli/setup:
           role-arn: "arn:aws:iam::957873794635:role/oidc_s3"
-          aws-region: us-east-2
+          aws-region: AWS_REGION
 workflows: 
   main: 
     jobs:
@@ -18,3 +20,4 @@ workflows:
       - install-aws-cli:
           requires: 
             - hugo/build
+          context: aws
