@@ -3,10 +3,9 @@ title: "About the Demo Site"
 date: 2023-04-03T10:45:19-06:00
 ---
 
-## CircleCI Onboarding
+## CircleCI Demo Site
 
-Welcome to the onboarding example site! 
+Welcome to the demo site! 
 
 The repo for this project can be found [here](https://github.com/tannerwride/demo-site)! 
 
-Test, you don't want to do this. 
